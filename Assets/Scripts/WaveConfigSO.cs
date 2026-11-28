@@ -8,15 +8,15 @@ public class WaveConfigSO : ScriptableObject
 
     public Transform GetStartingWaypoint()
     {
-        return pathPrefab.GetChild(0);
+        return pathPrefab.GetChild(0); // Get the first child of the pathPrefab, which represents the starting waypoint of the path.
     }
 
     public float GetEnemyMoveSpeed()
     {
-        return enemyMoveSpeed;
+        return enemyMoveSpeed; // Return the enemy move speed value.
     }
 
-    public Transform[] GetWaypoints()
+    public Transform[] GetWaypoints() // Get all the waypoints of the pathPrefab as an array of Transform objects.
     {
         Transform[] waypoints = new Transform[pathPrefab.childCount];
 
